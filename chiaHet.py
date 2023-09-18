@@ -1,10 +1,7 @@
-N, K = map(int, input().split())
-
-ans = 0
-
-for i in range(1, N + 1):
-    num = int(''.join(str(j) for j in range(1, i + 1)))
-    if num % K == 0:
-        ans += 1
-
-print(ans)
+t = int(input())
+for i in range(t):
+    a, b = map(int, input().split())
+    if(a % b == 0 or b % a == 0):
+        print("YES")
+    else:
+        print("NO")

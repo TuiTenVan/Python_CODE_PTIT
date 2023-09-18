@@ -1,18 +1,20 @@
 import math
-t = int(input())
-for i in range(t):
-    x = int(input())
-    if(x <= 10):
-        print(x)
-    elif x > 5 and x <= 10:
-        print(10)
-    else:
-        cnt = 0
-        while(x >= 10):
-            r = x % 10
-            x //= 10
-            if r >= 5:
-                x += 1
-            cnt += 1
+x = int(input())
+if(x <= 10 and x > 0):
+    print(x)
+elif x == 0:
+    print(1)
+else:
+    cnt = 0
+    while(x >= 100):
+        r = x % 10
+        cnt += 1
+        x //= 10
+    k = x % 10
+    x //= 10
+    cnt += 1
+    if k >= 5 :
+        x = (x + 1) * pow(10, cnt)
+    else:   
         x = x * pow(10, cnt)
-        print(x)
+    print(x)
