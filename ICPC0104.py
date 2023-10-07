@@ -15,4 +15,3 @@ for _ in range(t):
     s = input().strip()
     result = solve(s)
     print(result)
-    # print(type(result))
